@@ -1,0 +1,15 @@
+:root {
+  --void: #05070d; --basalt: #0e131c; --regolith: #1b2230;
+  --grey: #8c95a3; --starlight: #e8ecf2;
+  --life: #3dd6f5; --power: #ffb020; --food: #5bd98a; --rad: #e040a0; --rust: #d9532b; --alert: #ff3b3b;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+html, body { margin: 0; height: 100%; background: var(--void); color: var(--starlight); font-family: var(--font-body); overflow: hidden; }
+#scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#hud { position: fixed; top: 16px; left: 16px; min-width: 260px; padding: 14px 16px; background: color-mix(in srgb, var(--basalt) 82%, transparent); border: 1px solid var(--regolith); border-radius: 6px; backdrop-filter: blur(6px); }
+#hud h1 { font: 700 18px var(--font-display); margin: 0 0 10px; }
+#hud .row { display: flex; justify-content: space-between; gap: 24px; font: 400 13px var(--font-mono); padding: 3px 0; }
+#hud .row span:first-child { color: var(--grey); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
